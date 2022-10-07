@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="This is the AMP Boilerplate." />
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Import other AMP Extensions here -->
+    <script
+      async
+      custom-element="amp-sidebar"
+      src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+    ></script>
+
+    <script
+      async
+      custom-element="amp-accordion"
+      src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-youtube"
+      src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-carousel"
+      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-social-share"
+      src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"
+    ></script>
+
+    <style amp-custom>
+      /* Add your styles here */
+
+      .label li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 20px;
+        color: black;
+        font-family: sans-serif;
+      }
+      li {
+        padding-top: 15px;
+        list-style: none;
+      }
+      .main-content {
+        display: grid;
+        justify-content: space-evenly;
+        padding: 30px;
+        align-items: center;
+        border-radius: 20px;
+      }
+      .youtube-video {
+        padding-top: 40px;
+      }
+      .social-bar {
+        text-align: center;
+      }
+      .one {
+        border-radius: 50%;
+      }
+    </style>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+
+    <link rel="canonical" href="." />
+    <title>My AMP Page</title>
+  </head>
+  <body>
+    <header class="headerbar">
+      <div
+        class="navbar-trigger"
+        role="button"
+        tabindex="0"
+        on="tap:sidebar1.toggle"
+      >
+        ☰
+      </div>
+      <h2>Chico's Cheese Bicycles</h2>
+    </header>
+    <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left">
+      <div class="navbar-trigger" on="tap:sidebar1.toggle">X</div>
+      <nav class="nav">
+        <ul class="label">
+          <li class="nav-item">
+            <a href="#">Our Story</a>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <amp-accordion
+              layout="container"
+              disable-session-states
+              class="dropdown"
+            >
+              <section>
+                <header>OUR BIKES</header>
+                <ul class="dropdown-items">
+                  <li class="dropdown-item">
+                    <a href="#">Ricotta Racer</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Cheddar Chaser</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Parmesan Pacer</a>
+                  </li>
+                </ul>
+              </section>
+            </amp-accordion>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <amp-accordion
+              layout="container"
+              disable-session-states
+              class="dropdown"
+            >
+              <section>
+                <header>LATEST MODELS</header>
+                <ul class="dropdown-items">
+                  <li class="dropdown-item">
+                    <a href="#">Ricotta Racer</a>
+                  </li>
+                </ul>
+              </section>
+            </amp-accordion>
+          </li>
+          <li class="nav-item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </amp-sidebar>
+    <main>
+      <div class="main-content">
+        <div class="first-image">
+          <amp-img
+            src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fricotta-racer.jpg?1540228217746"
+            width="640px"
+            height="480px"
+            layout="responsive"
+            alt=""
+            class="image-second"
+          >
+          </amp-img>
+        </div>
+        <div class="below-hero">
+          <h2 class="main-heading">What we're about</h2>
+          <p class="main-text">
+            We sell the only ten-speed bicycles in the world made entirely of
+            cheese. They get you where you need to go, and you never arrive
+            hungry. Our bikes are 100% biodegradable. And with our new
+            rodent-repelling varnish they last longer than ever!
+          </p>
+        </div>
+        <div class="slider">
+          <amp-carousel
+            layout="responsive"
+            width="412px"
+            height="309px"
+            type="slides"
+            loop
+          >
+            <amp-img
+              src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheddar-chaser.jpg?1540228205366"
+              width="412px"
+              height="309px"
+              layout="responsive"
+              class="image-second"
+            ></amp-img>
+            <amp-img
+              src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheese.jpg?1540228223785"
+              width="412px"
+              height="309px"
+              layout="responsive"
+              class="image-second"
+            ></amp-img>
+            <amp-img
+              src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fmouse.jpg?1540228223963"
+              width="412px"
+              height="309px"
+              layout="responsive"
+              class="image-second"
+            ></amp-img>
+          </amp-carousel>
+        </div>
+        <div class="youtube-video">
+          <amp-youtube
+            width="480px"
+            height="270px"
+            layout="responsive"
+            data-videoid="BlpMQ7fMCzA"
+            class="image-second"
+          >
+          </amp-youtube>
+        </div>
+      </div>
+      <div class="social-bar">
+        <amp-social-share
+          type="email"
+          width="44"
+          height="44"
+          class="one"
+        ></amp-social-share>
+        <amp-social-share
+          type="linkedin"
+          width="44"
+          height="44"
+          class="one"
+        ></amp-social-share>
+        <amp-social-share
+          type="tumblr"
+          width="44"
+          height="44"
+          class="one"
+        ></amp-social-share>
+        <amp-social-share
+          type="twitter"
+          width="44"
+          height="44"
+          class="one"
+        ></amp-social-share>
+      </div>
+    </main>
+  </body>
+</html>
