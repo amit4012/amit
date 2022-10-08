@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8" />
+    <title>Joy of Pets</title>
+    <link rel="canonical" href="pets.html" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-video"
+      src="https://cdn.ampproject.org/v0/amp-video-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-story"
+      src="https://cdn.ampproject.org/v0/amp-story-1.0.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:200,300,400"
+      rel="stylesheet"
+    />
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
+    <style amp-custom>
+      amp-story {
+        font-family: Montserrat;
+        color: rgba(255,255,255,1);
+        font-style: italic;
+      }
+      amp-story-page {
+        background-color: #000;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 2.875em;
+        font-weight: normal;
+        line-height: 1.174;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        font-weight: normal;
+        font-size: 1.3em;
+        line-height: 1.5em;
+        color: #fff;
+      }
+      q {
+        font-weight: 300;
+        font-size: 1.1em;
+      }
+      amp-story-grid-layer.bottom {
+        align-content: end;
+      }
+      amp-story-grid-layer.noedge {
+        padding: 0px;
+      }
+      amp-story-grid-layer.center-text {
+        align-content: center;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+      }
+      .banner-text {
+        text-align: center;
+        background-color: #000;
+        line-height: 2em;
+      }
+      .animated-img{
+        opacity: 0.6;
+        position: relative;
+        animation-name: abc;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes abc{
+        from{
+          width:650px;
+          height:1120px
+        }
+        to{
+          width: 720px;
+          height: 1250px;
+        }
+      }
+      .lineUp {
+  animation: 3s anim-lineUp ease-out 1;
+
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Cover page -->
+    <amp-story
+      standalone
+      title="Joy of Pets"
+      publisher="AMP tutorials"
+      publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
+      poster-portrait-src="assets/cover.jpg"
+    >
+      <amp-story-page id="cover">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="gill/six.webp"
+            width="720"
+            height="1280"
+            layout="responsive"
+            class="animated-img"
+           >
+          
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom">
+          <h2>SHUBMAN GILL BREAKS </BR> SIDHU'S RECORD</h2>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <!-- Page 1 (Cat): 1 layer (vertical) -->
+      <amp-story-page id="page1">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="gill/two.webp"
+            width="720"
+            height="1280"
+            layout="responsive"
+          
+          >
+          </amp-img>
+         
+          
+          
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom lineUp">
+          <h2 class="bottom">Shubman Gill has been in fine form recently for india in the 50-over format</h2>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <!-- Page 2 (Dog): 2 layers (fill + thirds) -->
+      <amp-story-page id="page2">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="gill/three.webp"
+            width="720"
+            height="1280"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+          
+          <h3 grid-area="lower-third">
+          The right-handed batter excelled during the tour of West Indies and Zimbabwe while playing as an opener and at No.3
+          </h3>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <!-- Page 3 (Bird): 3 layers (fill + vertical + vertical) + Audio-->
+      <amp-story-page id="page3">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="gill/five.jpg"
+            width="720"
+            height="1280"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom">
+          <h3
+            >Despite a rare failure on Thursday against South Africa, Gill was able to break a record set by Navjot Singh Sindhu</h3
+          >
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <!-- Page 5 (Collage): 2 layers + animations -->
+      <amp-story-page id="page5">
+        <amp-story-grid-layer template="vertical" class="noedge">
+          <div class="wrapper">
+            <amp-img
+              src="gill/two.webp"
+              width="720"
+              height="1280"
+              layout="responsive"
+              animate-in="fade-in"
+              animate-in-delay="0.4s"
+            >
+            </amp-img>
+            <amp-img
+              src="gill/four.jpg"
+              width="720"
+              height="1280"
+              layout="responsive"
+              animate-in="fade-in"
+              animate-in-delay="0.6s"
+            >
+            </amp-img>
+            <amp-img
+              src="gill/three.webp"
+              width="720"
+              height="1280"
+              layout="responsive"
+              animate-in="fade-in"
+              animate-in-delay=".8s"
+            >
+            </amp-img>
+            <amp-img
+              src="gill/five.jpg"
+              width="720"
+              height="1280"
+              layout="responsive"
+              animate-in="fade-in"
+              animate-in-delay="1s"
+            >
+            </amp-img>
+          </div>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="center-text">
+          <p class="banner-text" animate-in="whoosh-in-right">
+            Shubman Gill
+          </p>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <!-- Bookend -->
+      <amp-story-bookend
+        src="bookend.json"
+        layout="nodisplay"
+      ></amp-story-bookend>
+    </amp-story>
+  </body>
+</html>
