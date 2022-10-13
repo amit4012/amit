@@ -71,13 +71,23 @@
       href="https://fonts.googleapis.com/css?family=Oswald:200,300,400"
       rel="stylesheet"
     />
+    <script
+      async
+      custom-element="amp-fit-text"
+      src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"
+    ></script>
     <style amp-custom>
       amp-story {
         font-family: "Oswald", sans-serif;
         color: #fff;
       }
       amp-story-page {
-        background-color: #000;
+        background-color: peru;
+      }
+      amp-img {
+        position: relative;
+        z-index: -3;
+        opacity: 0.7;
       }
       .main-heading {
         font-weight: bold;
@@ -85,7 +95,7 @@
         font-weight: 600;
         line-height: 1.174;
         text-align: center;
-        background-color: orange;
+        background-color: pink;
         padding: 30px;
       }
       h1 {
@@ -95,10 +105,15 @@
         line-height: 1.174;
       }
       p {
-        font-weight: normal;
-        font-size: 1.3em;
+        font-weight: 900;
+        font-size: 1em;
         line-height: 1.5em;
         color: #fff;
+        position: relative;
+        z-index: 100;
+        color: white;
+        word-spacing: 1px;
+        letter-spacing: 2px;
       }
       q {
         font-weight: 300;
@@ -121,7 +136,9 @@
       .banner-text {
         text-align: center;
         line-height: 2em;
-        background-color: chocolate;
+        font-weight: 900;
+        background-color: darkgoldenrod;
+        border-radius: 15px;
       }
     </style>
     <script
@@ -137,12 +154,13 @@
       publisher="AMP tutorials"
       publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
       poster-portrait-src="assets/cover.jpg"
+      style="background-color: orangered"
     >
       <amp-story-page id="mancover">
         <amp-story-grid-layer template="vertical" class="noedge">
           <div class="wrapper">
             <amp-img
-              src="/apple.jpg"
+              src="/cover1.jpg"
               width="720"
               height="1280"
               layout="responsive"
@@ -162,7 +180,7 @@
             >
             </amp-img>
             <amp-img
-              src="banana.jpg"
+              src="cover2.jpg"
               width="720"
               height="1280"
               layout="responsive"
@@ -172,7 +190,7 @@
             >
             </amp-img>
             <amp-img
-              src="grapefruite.jpg"
+              src="cover3.jpg"
               width="720"
               height="1280"
               layout="responsive"
@@ -184,24 +202,35 @@
           </div>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical" class="center-text">
-          <p class="banner-text" animate-in="whoosh-in-right">
+          <p class="banner-text" animate-in="twirl-in">
             5 Fruits To Eat In The Morning For Better Weight Loss
           </p>
         </amp-story-grid-layer>
       </amp-story-page>
 
       <amp-story-page id="page1">
-        <amp-story-grid-layer template="vertical">
-          <h1>Apple</h1>
+        <amp-story-grid-layer template="fill">
           <amp-img
+            animate-in="drop"
+            animate-in-duration="2s"
             src="apple.jpg"
             width="720"
             height="1280"
             layout="responsive"
             alt=""
           ></amp-img>
-
-          <p animate-in="fly-in-bottom">
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1
+            animate-in="fade-in"
+            animate-in-delay="1s"
+            animate-in-duration="5s"
+          >
+            Apple
+          </h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom">
+          <p animate-in="fly-in-bottom" animate-in-delay="2s">
             Eat an apple every morning and keep the pounds away. It is one of
             the best sources of fibre, which is key to getting rid of belly fat
           </p>
@@ -210,8 +239,8 @@
       <amp-story-page id="page2">
         <amp-story-grid-layer template="fill">
           <amp-img
-            animate-in="zoom-out"
-            animate-in-duration="5s"
+            animate-in="fly-in-left"
+            animate-in-duration="3s"
             src="banana.jpg"
             width="720"
             height="1280"
@@ -220,9 +249,17 @@
           >
           </amp-img>
         </amp-story-grid-layer>
-        <amp-story-grid-layer template="thirds">
-          <h1>Banana</h1>
-          <p grid-area="lower-third" animate-in="fly-in-bottom">
+        <amp-story-grid-layer template="vertical">
+          <h1
+            animate-in="fade-in"
+            animate-in-delay="1s"
+            animate-in-duration="5s"
+          >
+            Banana
+          </h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="bottom">
+          <p animate-in="fly-in-bottom" animate-in-delay="2s">
             Widely known to be high in potassium, bananas are also low in salt,
             protecting you against high blood pressure and stroke.
           </p>
@@ -232,6 +269,8 @@
       <amp-story-page id="page3">
         <amp-story-grid-layer template="fill">
           <amp-img
+            animate-in="fly-in-top"
+            animate-in-duration="3s"
             src="grapefruite.jpg"
             width="720"
             height="1280"
@@ -242,13 +281,21 @@
         </amp-story-grid-layer>
 
         <amp-story-grid-layer template="vertical">
-          <h1>Grapefruit</h1>
+          <h1
+            animate-in="fade-in"
+            animate-in-delay="1s"
+            animate-in-duration="5s"
+          >
+            Grapefruit
+          </h1>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical" class="bottom">
-          <p animate-in="fly-in-bottom">
-            Grapefruit is not pleasing on the eyes but it is one of the best
-            fruits for fat loss. It is also said to help in controlling blood
-            sugar levels and sensitizing the body to insulin.
+          <p animate-in="fly-in-bottom" animate-in-delay="2s">
+            <amp-fit-text width="400" height="130">
+              Grapefruit is not pleasing on the eyes but it is one of the best
+              fruits for fat loss. It is also said to help in controlling blood
+              sugar levels and sensitizing the body to insulin.
+            </amp-fit-text>
           </p>
         </amp-story-grid-layer>
       </amp-story-page>
@@ -256,6 +303,8 @@
       <amp-story-page id="page4">
         <amp-story-grid-layer template="fill">
           <amp-img
+            animate-in="fly-in-bottom"
+            animate-in-duration="3s"
             src="Raspberries.jpg"
             width="720"
             height="1280"
@@ -266,10 +315,16 @@
         </amp-story-grid-layer>
 
         <amp-story-grid-layer template="vertical">
-          <h1>Raspberries</h1>
+          <h1
+            animate-in="fade-in"
+            animate-in-delay="1s"
+            animate-in-duration="5s"
+          >
+            Raspberries
+          </h1>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical" class="bottom">
-          <p animate-in="fly-in-bottom">
+          <p animate-in="fly-in-bottom" animate-in-delay="2s">
             Raspberries are a rich source of Vitamin C and the fruit with one of
             the highest water content.
           </p>
@@ -279,6 +334,7 @@
       <amp-story-page id="page5">
         <amp-story-grid-layer template="fill">
           <amp-img
+            animate-in="drop"
             src="Avocados.jpg"
             width="720"
             height="1280"
@@ -289,15 +345,21 @@
         </amp-story-grid-layer>
 
         <amp-story-grid-layer template="vertical">
-          <h1>Avocados</h1>
+          <h1
+            animate-in="fade-in"
+            animate-in-delay="1s"
+            animate-in-duration="5s"
+          >
+            Avocados
+          </h1>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical" class="bottom">
-          <p animate-in="fly-in-bottom">
+          <p animate-in="fly-in-bottom" animate-in-delay="2s">
             Avocados are the latest when it comes to health trends and it is no
             wonder as it has an abundance of Vitamins from C to E.
           </p>
         </amp-story-grid-layer>
-      </amp-story-page>   
+      </amp-story-page>
     </amp-story>
   </body>
 </html>
